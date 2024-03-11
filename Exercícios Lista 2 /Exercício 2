@@ -1,0 +1,46 @@
+// Ex 02 - Uma dúvida que sempre paira na cabeça dos motoristas é: Abastecer com etanol ou gasolina? 
+// Especialistas indicam que o consumo do carro aumenta em torno de trinta por cento, quando
+// abastecido com etanol, logo, só vale a pena abastecer com ele se o valor estiver abaixo de 
+// setenta por cento do valor da gasolina. Para auxiliar motoristas a realizar este cálculo, crie um  
+// algoritmo que receba o preço dos dois combustíveis, e informe qual deve ser a escolha, com base no custo.
+
+
+import java.util.Scanner; 
+
+    public class comparacaoCombustivel {
+        
+        public static void main(String[] args) {
+             
+        double etanol;
+        double gasolina;
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Informe o valor do etanol: R$");
+        etanol = input.nextDouble();
+        
+        System.out.print("Informe o valor da gasolina: R$");
+        gasolina = input.nextDouble();    
+        
+        double percentual = 0.7; 
+        double calculoPorcentagem = gasolina - (gasolina * percentual);
+    
+        
+
+        if (etanol > calculoPorcentagem) {
+        
+        System.out.println("Devido a diferença entre os valores, seria mais viável utilizar gasolina, pois está custando R$" + gasolina + ".");
+        }
+        
+        
+        
+        else {
+        
+       System.out.println("Devido a diferença entre os valores, seria mais viável utilizar etanol, pois está custando R$" + gasolina + "."); 
+    
+        }
+        
+        input.close(); 
+        
+        }
+    }
