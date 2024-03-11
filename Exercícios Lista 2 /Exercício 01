@@ -1,0 +1,27 @@
+// Ex 01 - Crie um algoritmo que leia um valor de hora (HH:MM) e informe (calcule)
+// quantos minutos se passaram desde o início do dia (00:00).
+
+import java.util.Scanner;
+
+public class horasMinutos
+{
+	public static void main(String[] args) {
+		
+		int horas;
+		int minutos;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("Informe as horas: ");
+		horas = input.nextInt();
+		
+		System.out.print("Informe os minutos: ");
+		minutos = input.nextInt();
+		
+		int minutosPassados = horas * 60 + minutos;
+		
+		System.out.println("Agora são " + horas + " horas e " + minutos + " minutos.\n");
+		System.out.println("Logo, já se passaram " + minutosPassados + " minutos.");
+		
+		input.close();
+	}
+}
