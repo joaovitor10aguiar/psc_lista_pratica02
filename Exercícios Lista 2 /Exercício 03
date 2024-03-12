@@ -21,7 +21,7 @@ public class comparacaoCombustivel {
     
     c = a * a + b * b; 
     
-    System.out.println(Math.sqrt(c));
+    System.out.println("O valor é: " + (Math.sqrt(c)));
     
     input.close();
 	}  
