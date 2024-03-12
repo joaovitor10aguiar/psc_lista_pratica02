@@ -1,0 +1,28 @@
+// Ex 03 - Escreva um programa que calcule o teorema de Pitágoras, representado pela expressão: c =a2+b2 
+
+import java.util.Scanner;
+
+public class comparacaoCombustivel {
+	public static void main(String[] args) {
+		
+	int a; 
+	int b;
+	int c; 
+	
+	Scanner input = new Scanner(System.in);
+    System.out.print("Informe um número para o lugar de A: ");
+    a = input.nextInt(); 
+    
+    System.out.print("Informe um número para o lugar de B: ");
+    b = input.nextInt(); 
+    
+    System.out.print("Informe um número para o lugar de C: ");
+    c = input.nextInt();
+    
+    c = a * a + b * b; 
+    
+    System.out.println(Math.sqrt(c));
+    
+    input.close();
+	}  
+}
