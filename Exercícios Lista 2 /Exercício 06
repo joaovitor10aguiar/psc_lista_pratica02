@@ -5,7 +5,7 @@ Sempre arredonde o valor para cima, e acrescente dez por cento para o acabamento
 
 import java.util.Scanner;
 
-public class Main {
+public class Ceramica {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
