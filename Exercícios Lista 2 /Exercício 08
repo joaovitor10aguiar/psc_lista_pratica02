@@ -1,0 +1,29 @@
+*/ Ex 08 - Faça um programa que calcule o tempo necessário para o download de um arquivo qualquer da internet.
+Deve-se informar o tamanho do arquivo em MB, a velocidade do link em Mbps e, retornar o tempo total em minutos.
+/* 
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double tamanhoArquivoMB;
+        double velocidadeMbps;
+
+        System.out.print("Digite o tamanho do arquivo a ser baixado (em MB): ");
+        tamanhoArquivoMB = scanner.nextDouble();
+
+        System.out.print("Digite a velocidade do link de internet (em Mbps): ");
+        velocidadeMbps = scanner.nextDouble();
+
+        double velocidadeMBps = velocidadeMbps / 8;
+
+        double tempoSegundos = tamanhoArquivoMB / velocidadeMBps;
+        double tempoMinutos = tempoSegundos / 60;
+
+        System.out.println("O tempo necessário para download será de: " + tempoMinutos + " minutos");
+
+        scanner.close();
+    }
+}
