@@ -1,0 +1,38 @@
+/* Ex 11 - Muitas pessoas têm dúvida sobre qual o gasto com energia de determinados equipamentos que possuem. 
+Crie um algoritmo que receba a potência do equipamento em Watts, a quantidade de horas que ele fica ligado por dia,
+e o valor do KW/h. O cálculo é feito multiplicando a potência pela quantidade de horas, depois, dividindo por mil. 
+Ao final, apresente a quantidade de KWh consumidos pelo equipamento e qual será o valor pago por eles.
+*/
+
+import java.util.Scanner;
+
+public class GastoDeEnergia {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double potencia;
+        int horas;
+        double valorKwH;
+
+    System.out.print("Informe o valor da potência do equipamento (Em Watts): ");
+    potencia = scanner.nextDouble();
+
+    System.out.print("Informe a quantidade de horas que ele fica ligado por dia: ");
+    horas = scanner.nextInt();
+
+    System.out.print("Informe o valor do Kw/H: ");
+    valorKwH = scanner.nextDouble();
+
+    double gastoEnergia = (potencia * horas) / 1000;
+
+    double valorPago = valorKwH * gastoEnergia;
+
+    System.out.println("A quantidade gasta de KW/h foi: " + gastoEnergia);
+    System.out.println("\nSendo assim, deverá ser pago R$" + valorPago + " pela energia consumida.");
+
+
+scanner.close();
+
+    }
+
+}
