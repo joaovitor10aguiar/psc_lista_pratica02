@@ -1,0 +1,40 @@
+/* Ex 06 - Faça um programa para uma loja de cerâmica que ajuda no cálculo da quantidade de revestimento necessário para uma obra. 
+A pessoa utilizadora deve informar as medidas de largura e comprimento da área que será revestida e da cerâmica escolhida.
+Sempre arredonde o valor para cima, e acrescente dez por cento para o acabamento.
+*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double larguraArea;
+        double comprimentoArea;
+        double larguraCeramica;
+        double comprimentoCeramica;
+        
+        System.out.print("Digite a largura da área a ser revestida (em metros): ");
+        larguraArea = scanner.nextDouble();
+
+        System.out.print("Digite o comprimento da área a ser revestida (em metros): ");
+        comprimentoArea = scanner.nextDouble();
+
+        System.out.print("Digite a largura da cerâmica escolhida (em metros): ");
+        larguraCeramica = scanner.nextDouble();
+
+        System.out.print("Digite o comprimento da cerâmica escolhida (em metros): ");
+        comprimentoCeramica = scanner.nextDouble();
+
+        double areaTotal = larguraArea * comprimentoArea;
+        double areaCeramica = larguraCeramica * comprimentoCeramica;
+        int quantidadeCeramica = (int) Math.ceil(areaTotal / areaCeramica * 1.1);
+
+        System.out.println("\nQuantidade de revestimento necessário:");
+        System.out.println("Área total a ser revestida: " + areaTotal + " metros quadrados.");
+        System.out.println("Área de cada cerâmica: " + areaCeramica + " metros quadrados.");
+        System.out.println("Quantidade de cerâmica necessária: " + quantidadeCeramica + " unidades.");
+
+        input.close();
+    }
+}
