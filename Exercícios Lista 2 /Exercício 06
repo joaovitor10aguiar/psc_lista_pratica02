@@ -15,16 +15,16 @@ public class Main {
         double comprimentoCeramica;
         
         System.out.print("Digite a largura da área a ser revestida (em metros): ");
-        larguraArea = scanner.nextDouble();
+        larguraArea = input.nextDouble();
 
         System.out.print("Digite o comprimento da área a ser revestida (em metros): ");
-        comprimentoArea = scanner.nextDouble();
+        comprimentoArea = input.nextDouble();
 
         System.out.print("Digite a largura da cerâmica escolhida (em metros): ");
-        larguraCeramica = scanner.nextDouble();
+        larguraCeramica = input.nextDouble();
 
         System.out.print("Digite o comprimento da cerâmica escolhida (em metros): ");
-        comprimentoCeramica = scanner.nextDouble();
+        comprimentoCeramica = input.nextDouble();
 
         double areaTotal = larguraArea * comprimentoArea;
         double areaCeramica = larguraCeramica * comprimentoCeramica;
