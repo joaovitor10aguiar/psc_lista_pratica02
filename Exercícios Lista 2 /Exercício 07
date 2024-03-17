@@ -1,0 +1,43 @@
+// Ex 07 - Incremente o programa da questão 6, para informar o valor do metro quadrado da cerâmica escolhido e o valor total a ser pago.
+
+import java.util.Scanner;
+
+public class Ceramica {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double larguraArea;
+        double comprimentoArea;
+        double larguraCeramica;
+        double comprimentoCeramica;
+        double valorMetroQuadrado;
+
+        System.out.print("Digite a largura da área a ser revestida (em metros): ");
+        larguraArea = input.nextDouble();
+
+        System.out.print("Digite o comprimento da área a ser revestida (em metros): ");
+        comprimentoArea = input.nextDouble();
+
+        System.out.print("Digite a largura da cerâmica escolhida (em metros): ");
+        larguraCeramica = input.nextDouble();
+
+        System.out.print("Digite o comprimento da cerâmica escolhida (em metros): ");
+        comprimentoCeramica = input.nextDouble();
+
+        System.out.print("Digite o valor por metro quadrado da cerâmica escolhida: ");
+        valorMetroQuadrado = input.nextDouble();
+
+        double areaTotal = larguraArea * comprimentoArea;
+        double areaCeramica = larguraCeramica * comprimentoCeramica;
+        int quantidadeCeramica = (int) Math.ceil(areaTotal / areaCeramica * 1.1);
+        double valorTotal = quantidadeCeramica * valorMetroQuadrado * areaCeramica;
+
+        System.out.println("\nQuantidade de revestimento necessário:");
+        System.out.println("Área total a ser revestida: " + areaTotal + " metros quadrados.");
+        System.out.println("Área de cada cerâmica: " + areaCeramica + " metros quadrados.");
+        System.out.println("Quantidade de cerâmica necessária: " + quantidadeCeramica + " unidades.");
+        System.out.println("Valor total a ser pago: R$" + valorTotal);
+
+        input.close();
+    }
+}
