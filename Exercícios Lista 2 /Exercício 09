@@ -1,0 +1,56 @@
+*/ Ex 09 - Crie um programa para calcular o IMC de uma pessoa. Ele deve receber o peso atual em quilogramas e a altura,
+em centímetros, e exibir o peso ideal e o peso ideal ajustado. Dica: https://eurofarma.com.br/calculadoras/calculadora-de-peso-ideal
+Utilize este como referência para seus testes. Obs. O IMC é apenas uma referência, um médico deve ser 
+consultado para entender as necessidades de cada indivíduo.
+*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double peso;
+        double alturaCM;
+
+        System.out.print("Digite o seu gênero: ");
+        String genero = scanner.next().toLowerCase();
+
+        System.out.print("Digite o peso atual (em kg): ");
+        peso = scanner.nextDouble();
+
+        System.out.print("Digite a altura (em cm): ");
+        alturaCM = scanner.nextDouble();
+
+
+        double alturaM = alturaCM / 100;
+        double imc = peso / (alturaM * alturaM);
+
+        double pesoIdealMasculino = 52 + (0.75 * (alturaCM - 152.40));
+        double pesoIdealAjustadoMasculino = ((peso - pesoIdealMasculino) * 0.25) + pesoIdealMasculino;
+
+        double pesoIdealFeminino = 52 + (0.67 * (alturaCM - 152.40));
+        double pesoIdealAjustadoFeminino = ((peso - pesoIdealFeminino) * 0.25) + pesoIdealFeminino;
+
+
+        if (genero.equals("masculino")) {
+
+            System.out.println("\nResultados:");
+            System.out.println("Seu IMC é: " + imc);
+            System.out.println("Peso ideal: " + pesoIdealMasculino + " kg");
+            System.out.println("Peso ideal ajustado: " + pesoIdealAjustadoMasculino + " kg");
+
+        } else if (genero.equals("feminino")) {
+
+            System.out.println("\nResultados:");
+            System.out.println("Seu IMC é: " + imc);
+            System.out.println("Peso ideal: " + pesoIdealFeminino + " kg");
+            System.out.println("Peso ideal ajustado: " + pesoIdealAjustadoFeminino+ " kg");
+
+        }
+
+
+    scanner.close();
+
+    }
+}
